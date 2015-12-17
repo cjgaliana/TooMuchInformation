@@ -1,13 +1,29 @@
 # README
-## This is the README for your extension "tmi" 
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+## Too Much Information extension for Visual Studio Code
+This extension helps you to quicky add a vscode settings.json file to your folder with the "files.exclude" tag in it.
+In case the settings.json file already exists, just adds the "files.exlude" option in case it doesn't exist. 
 
-* Split the editor (`Cmd+\` on OSX or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on OSX or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (OSX) to see a list of Markdown snippets
+
+### How to compile it
+1. Clone the repo in you machine
+2. Run `npm install`
+3. Open the folder in VS Code
+4. Press F5 to debug the extension
+
+### How to use the extension
+1. Press F1 and write "Too Much Information"
+2. After that, a new "settings.json" file will appearr in the explorer, in the ./vscode folder
+3. Add your custom rules to exclude files. For example:
+
+`{
+	"files.exclude": {
+		"**/*.js" : true,
+		"**/*.js.map" : true,
+		"**/node_modules" : true
+	}
+}`
 
 ### For more information
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+* [Extending Visual Studio Code](https://code.visualstudio.com/docs/extensions/overview)
 
 ** Enjoy!**
