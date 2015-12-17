@@ -1,0 +1,31 @@
+{
+	"name": "tmi",
+	"displayName": "TMI",
+	"description": "Creates a visual studio code config file to hide files and folders in the 'Explore'",
+	"version": "0.0.1",
+	"publisher": "cjgaliana",
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.hideFiles"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [{
+			"command": "extension.hideFiles",
+			"title": "Too Much Information"
+		}]
+	},
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
+	},
+	"devDependencies": {
+		"typescript": "^1.6.2",
+		"vscode": "0.10.x"
+	}
+}
