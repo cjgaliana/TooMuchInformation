@@ -1,5 +1,5 @@
 # README
-## Too Much Information extension for Visual Studio Code
+## 'Too Much Information' extension for Visual Studio Code
 This extension helps you to quicky add a vscode settings.json file to your folder with the "files.exclude" tag in it.
 In case the settings.json file already exists, just adds the "files.exlude" option in case it doesn't exist. 
 
