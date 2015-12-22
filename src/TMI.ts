@@ -29,7 +29,6 @@ export class TMI {
 		
 		// The file does not exist. So create it
 		let emptyJson = JSON.parse("{}");
-		console.log("Empty json: " + JSON.stringify(emptyJson));
 		let data = this.createExcludeSetting(emptyJson);
 		this.saveFile(data, filePath);
 	}
@@ -46,6 +45,7 @@ export class TMI {
 			}
 		}
 		catch (e) {
+        // Not happy with these nested try/catchs
 			try {
 				let result = fs.mkdirSync(this.vscodeFolder);
 				console.log("Creating vscode folder");
@@ -69,7 +69,7 @@ export class TMI {
 			return false;
 		}
 		catch (e) {
-			// console.log("Exception checking if file exists" + JSON.stringify(e));
+			console.log("Exception checking if file exists" + JSON.stringify(e));
 			return false;
 		}
 	}
@@ -79,7 +79,7 @@ export class TMI {
 		let json = JSON.parse(content);
 
 		if (json[this.excludeTag] != undefined) {
-			this.showNotification('You folder already contains the exclude settings for vscode');
+			this.showNotification('Your folder already contains the exclude settings for vscode');
 		}
 		else {
 			console.log(this.excludeTag + ' does not exist');
